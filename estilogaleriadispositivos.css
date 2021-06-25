@@ -1,0 +1,190 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway); /* Etiqueta para importar ligas de pagina de internet*/ 
+:before, *:after{ 
+    margin: 0; /*  Este sera el margen que tendra la sección sera de 0*/
+    padding: 0; /*  Esta etiqueta es para el relleno que sera de 0*/
+    -webkit-box-sizing: border-box;  
+    -moz-box-sizing:border-box; /*Esta etiqueta es para introducir que la galeria se encuentre 
+                                  dentro de una caja */ 
+    box-sizing: border-box;
+  }
+  
+  body{
+    background:white; /*Esta es la etiqueta da el color al cuerpo de la pagina, sera 
+                          blanco */ 
+    font-size: 16px; /* El tamaño de las letras seran de 16 pixeles */ 
+    font-family: 'Trebuchet MS'; /* Esta etiqueta es para definir el estilo de la letra*/ 
+  }
+
+  
+/*Aplicando estilo a el logotipo*/
+.logo{
+  height:1px; /*Tendra un ancho de .10px*/
+  width:auto; /*Se define la altura de la imagen*/
+  margin-left: 35px; /*Se define el margen que tendra la imagen del lado izquierdo con la página*/
+  margin-top:.1px;  /*Se define el margen que tendra la imagen del lado de arriba con la página*/
+}
+
+   /* Seccion del titullo del menu */ 
+  .main-title{
+    margin-top: 5px; /* Etiqueta para agregar el margen de separación de arriba es de 5 pixeles */ 
+    margin-bottom:35px ; /* Etiqueta para agregar el margen de sepacion de abajo es de 5 pixeles */ 
+    margin-left:450px;
+    color: #2d2d2d;  /* Etiqueta para agregar color a las letras del titulo */ 
+    text-align: center; /* Etiqueta para alinear el texto: sera en el centro */ 
+    font-family: cursive; /* Estiqueta para definir el estilo de la letra */ 
+    text-transform: capitalize; /* Etiqueta para la transformación del titulo*/ 
+    padding: 0.7em 0;   /* Etiqueta para indicar el relleno que sera de 0.7, menor a 12 puntos*/ 
+    font-size: 300%;  /* Etiqueta para agregar el tamaño al texto*/ 
+    width: 720px;
+    height: auto;
+    background:#00B0F0;
+    border-radius: 50% / 10%;
+    color: white;
+    
+  }
+
+  
+  .container{
+    padding: 1em 0;   /* Etiqueta para indicar el relleno que sera de 1em, a 12 puntos*/ 
+    float: left;  /* Etiqueta para indicar que se encontrará en la parte izquierda*/ 
+    width: 50%;  /* Etiqueta para indicar el ancho del contenido*/ 
+  }
+  @media screen and (max-width: 640px){
+    .container{
+      display: block;  /* Etiqueta para indicar como se mostrará en pantalla*/ 
+      width: 9%;  /* Etiqueta para indicar el ancho del contenido*/ 
+    }
+  }
+  
+  @media screen and (min-width: 900px){
+    .container{
+      width: 25%; /* Etiqueta para indicar el ancho del contenido*/ 
+    }
+  }
+  
+  /* Aplicando atributos al titulo de cada una de las tarjetas*/ 
+  .container .title{
+    color:red; /* Etiqueta para el color de las letras*/ 
+    text-align: center; /* Etiqueta para alinear el texto en el centro*/ 
+    margin-bottom: 10px; /* Etiqueta para indicar el margen de espaciado en la parte de abajo*/ 
+    margin-left: 30px; /* Etiqueta para indicar el margen de espaciado que tendra de lado izquierdo*/ 
+
+  }
+  
+  .content {
+    position: relative; /* Etiqueta para indicar la posicion del contenido*/ 
+    width: 90%;  /* Etiqueta para indicar el ancho del contenido*/ 
+    max-width: 400px; /* Etiqueta para indicar el ancho del contenido con un maximo de 400px*/ 
+    margin: auto; /* Etiqueta para indicar el margen de forma automatica*/ 
+    overflow: hidden; /* Etiqueta para aplicar efecto, que hara que este no sea visible*/ 
+  }
+  
+  .content .content-overlay {
+    background: rgba(0,0,0,0.7); /* Etiqueta para indicar el color de la caja que aparecera dentro de la imagen*/ 
+    position: absolute; /* Etiqueta para indicar la posicion del contenido*/ 
+    height: 99%; /* Etiqueta para indicar la altura del contenido*/ 
+    width: 80%; /* Etiqueta para indicar el ancho del contenido*/ 
+    margin-left: 50px; /* Etiqueta para indicar el margen de espaciado en la parte izquierda*/ 
+    left: 0; /* Etiqueta para indicar que de lado izquierdo se aplicara 0*/ 
+    top: 0; /* Etiqueta para indicar que en la parte superior se aplicara 0*/ 
+    bottom: 0; /* Etiqueta para indicar que en la parte inferior se aplicara 0*/ 
+    right: 0; /* Etiqueta para indicar que de lado derecho se aplicara 0*/ 
+    opacity: 0; /* Esta etiqueta hara que la caja desaparezca*/ 
+    -webkit-transition: all 0.4s ease-in-out 0s; /*  Etiquetas para las transiciones*/ 
+    -moz-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+  }
+  
+  .content:hover .content-overlay{
+    opacity: 1;  /* Esta etiqueta hara que la caja aparezca al haber pasado el mouse*/ 
+  }
+  
+  /* Atributos a cada una de las imagenes de las secciones*/ 
+  .content-image{
+    width: 80%; /* Esta etiqueta define el ancho que tendra la imagen*/ 
+    text-align: center; /* Esta etiqueta define la alineacion de la imagen- sera el centro junto
+                        con el texto*/ 
+    margin-left: 50px; /* Esta etiqueta indica el margen del lado izquierdo*/ 
+    border-image:10px black; /* El borde de la imagen sera de 1o pixeles y de color negro*/ 
+  }
+  /*Atributos para los detalles del contenido*/ 
+  .content-details {
+    position: absolute; /* Esta etiqueta define la posición que sera absoluta*/ 
+    text-align: center; /* Esta etiqueta define la alineacion del texto, sera centrado*/ 
+    padding-left: 1em;  /*El relleno de la parte izquierda  sera de 12 puntos*/ 
+    padding-right: 1em; /*El relleno de la parte izquierda  sera de 12 puntos*/ 
+    width: 90%; /*Etiqueta para definir el ancho, sera de 90%*/ 
+    top: 50%; /*Etiqueta para definir la posicion derecha, sera con un porcentaje de 50*/ 
+    left: 50%; /*Etiqueta para definir la posicion izquierda, sera con un porcentaje de 50*/ 
+    opacity: 0; /*Etiqueta para definir que el contenido no sea visible*/ 
+    /*Etiquetas para definir los atributos de transformación del contenido*/ 
+    -webkit-transform: translate(-50%, -50%); 
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+        transition: all 0.3s ease-in-out 0s; /*Etiqueta para definir la transicion del contenido */ 
+  }
+  
+  /*Aplicando atributos al contenido para que este sea visible */ 
+  .content:hover .content-details{
+    top: 50%; /* Etiqueta para definir la posicion de arriba sera de 50 */ 
+    left: 50%; /* Etiqueta para definir la posicion de la izquierda sera de 50 */ 
+    opacity: 1; /* Etiqueta para definir que el texto sea visible al detectar el mouse */ 
+  }
+  
+  /* Aplicando atributos al titulo que contendra cada tarjeta */ 
+  .content-details h3{
+    color: #00B0F0;  /* Etiqueta para definir el color*/ 
+    font-weight: 10000; /* Etiqueta para definir el grosor de las letras del titulo*/ 
+    letter-spacing: 0.15em; /* Etiqueta para definir el espacio que habra entre cada letra*/ 
+    margin-bottom: 0.5em; /* Etiqueta para definir el margen de espaciado que tendra en la parte inferior*/ 
+    margin-left: 50px; /* Etiqueta para definir el margen de separacion que tendra del lado izquierdo */ 
+    text-align: center; /* Etiqueta para definir la alineacion del texto, sera centrado */ 
+    text-transform: uppercase;  /* Etiqueta para definir la transformacion de las letras a mayusculas */ 
+    font-family: 'Trebuchet MS'; /* Etiqueta para definir el estilo de la letra*/ 
+  }
+  
+  /* Aplicando atributos a las caracteristicas del dispositivo */ 
+  .content-details p{
+    color: #fff; /* Etiqueta para definir el color, sera blanco */ 
+    font-size: 15px; /* Etiqueta para definir el tamaño de las letras, seran de 15 pixeles */ 
+    text-align: center; /* Etiqueta para definir la alineacion del texto, sera centrado*/ 
+    margin-left: 30px; /* Etiqueta para definir el margen de separacion sera de 30 pixeles*/ 
+
+  }
+/* Aplicando atributos a la clase precio */
+  .content-precio {
+
+    color:white; /* Etiqueta para definir el color, sera blanco */
+    font-size: 16px; /* Etiqueta para definir el tamaño de las letras, seran de 16 pixeles*/
+    text-align:center;  /* Etiqueta para definir la alineacion del texto, sera centrado*/ 
+    margin-left: 30px; /* Etiqueta para definir el margen de separacion sera de 30 pixeles*/ 
+    text-decoration: line-through; /* Etiqueta para hacer que el texto sea subrayado*/ 
+  }
+
+  /* Aplicando atributos a la clase precionuevo*/
+  .content-precionuevo{
+    color: #00B0F0; /* Etiqueta para definir el color, sera un tono azul*/
+    font-size: 16px;  /* Etiqueta para definir el tamaño de las letras, seran de 16 pixeles*/
+    text-align: center; /* Etiqueta para definir la alineacion del texto, sera centrado*/ 
+    margin-left: 30px; /* Etiqueta para definir el margen de separacion sera de 30 pixeles*/ 
+  }
+  
+  /* Aplicando efectos a cada una de las tarjetas*/ 
+  .fadeIn-bottom{
+    top: 80%;
+  }
+  
+  .fadeIn-top{
+    top: 20%;
+  }
+  
+  .fadeIn-left{
+    left: 20%;
+  }
+  
+  .fadeIn-right{
+    left: 80%;
+  }
+
